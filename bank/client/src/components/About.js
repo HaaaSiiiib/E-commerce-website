@@ -25,15 +25,15 @@ const About = () => {
             });
 
             const data1 = await res.json();
-            console.log(data1);
+            //console.log(data1);
             setUserData(data1);
             //console.log(userData);
-            console.log(data1);
+            //console.log(data1);
 
-            // if (!res.status === 200) {
-            //     const error = new Error(res.error);
-            //     throw error();
-            // }
+            if (res.status != 200) {
+                const error = new Error(res.error);
+                throw error();
+            }
 
 
         } catch (err) {
@@ -171,7 +171,7 @@ const About = () => {
 
         </>
 
-        //<></>
+       
     )
 
 

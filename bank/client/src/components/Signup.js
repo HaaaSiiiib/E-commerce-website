@@ -47,8 +47,8 @@ const PostData = async (e) =>{
 
          
         localStorage.setItem("accNum", data.accountNumber)
-         window.alert("Registration Successful\nAccount Number: " + data.accountNumber);
-         window.prompt("Registration Successful\nAccount Number: " + data.accountNumber);
+         //window.alert("Registration Successful\nAccount Number: " + data.accountNumber);
+         //window.prompt("Registration Successful\nAccount Number: " + data.accountNumber);
          //console.log("Successful Registration");
 
          history.push("/successful")

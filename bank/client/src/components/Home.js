@@ -12,8 +12,8 @@ const Home = () => {
         }} className='home-page'>
             <div className='home-div'>
 
-            <p style={{ color: "white" ,position : 'relative', top: '550px',fontWeight:"bolder", left:'100px',fontSize:"80px"}} className='pt-5'>Greetings</p>
-            <h1  style={{ color: "white",color:'white',position:'relative', top: '550px', left:'110px', fontWeight:"bold",fontSize:"50px" }}>From the Bank of Akhalia</h1>
+            <p style={{ color: "white" , fontFamily:'-moz-initial', position : 'relative', top: '550px',fontWeight:"bolder", left:'100px',fontSize:"80px"}} className='pt-5'>Greetings</p>
+            <h1  style={{ color: "white",fontFamily:'-moz-initial',color:'white',position:'relative', top: '550px', left:'110px', fontWeight:"bold",fontSize:"50px" }}>From the Bank of Akhalia</h1>
                 
             </div>
 
