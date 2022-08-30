@@ -98,20 +98,20 @@ const Bank = () => {
 
 
 
-                            <div className='signin-form' style={{ position: 'relative', top: '80px', left: '270px' }}>
-                                <h2 style={{ color: "white", fontFamily: 'ubuntu', fontWeight: "bolder", fontSize: '70px' }} className='form-title mb-5' >Log into your Bank account</h2>
-                                <form mothod="POST" className="register-form" id="register-form">
+                            <div className='signin-form' style={{ position: 'relative', top: '70px', left: '350px' }}>
+                                <h2 style={{ color: "white", borderColor:'black', position : 'relative', fontFamily: 'ubuntu', fontWeight: "bolder", fontSize: '70px',  left:'-170px' }} className='form-title mb-5' >Log into your Bank account</h2>
+                                <form  mothod="POST" className="register-form" id="register-form">
 
-                                    <div class="input-container">
-                                        <i class="fa fa-book icon"></i>
-                                        <input class="input-field" style={{ color: 'white', fontFamily: 'cursive', fontWeight: "bolder", fontSize: '25px' }} type="text"
+                                    <div className="input-container">
+                                        <i className="fa fa-book icon"></i>
+                                        <input className="input-field" style={{ color: 'white', fontFamily: 'cursive', fontWeight: "bolder", fontSize: '25px' }} type="text"
                                             value={accountNumber}
                                             onChange={(e) => setAccountNumber(e.target.value)} placeholder="Enter Bank Account Number" name="accountNumber" />
                                     </div>
 
-                                    <div class="input-container">
-                                        <i class="fa fa-key icon"></i>
-                                        <input class="input-field" style={{ color: 'white', fontFamily: 'cursive', fontWeight: "bolder", fontSize: '25px' }} type="password"
+                                    <div className="input-container">
+                                        <i className="fa fa-key icon"></i>
+                                        <input className="input-field" style={{ color: 'white', fontFamily: 'cursive', fontWeight: "bolder", fontSize: '25px' }} type="password"
                                             value={password}
                                             onChange={(e) => setPassword(e.target.value)}
                                             placeholder="Enter Password" name="password" />

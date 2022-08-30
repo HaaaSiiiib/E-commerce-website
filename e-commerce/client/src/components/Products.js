@@ -22,6 +22,9 @@ const Products = () => {
             },
            
         });
+        if(res.status != 200) {
+            history.push('/login');
+        }
 
         const data = await res.json();
         localStorage.setItem("products",JSON.stringify(data)); 

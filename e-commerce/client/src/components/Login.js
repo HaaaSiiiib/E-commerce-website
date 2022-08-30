@@ -59,17 +59,17 @@ const Login = () => {
                             <h2 style={{ color: "white", fontFamily:'cursive' , fontWeight:"bolder", fontSize :'70px' }}className='form-title mb-5' >Log In</h2>
                                 <form mothod ="POST" className="register-form" id = "register-form">
 
-                                <div class="input-container">
-                                    <i class="fa fa-book icon"></i>
-                                        <input class="input-field" style ={{color :'white',fontFamily:'cursive',fontWeight:"bolder", fontSize :'25px'  }} type="text" 
+                                <div className="input-container">
+                                    <i className="fa fa-book icon"></i>
+                                        <input className="input-field" style ={{color :'white',fontFamily:'cursive',fontWeight:"bolder", fontSize :'25px'  }} type="text" 
                                         value={email}
                                         onChange = {(e) => setEmail(e.target.value)}
                                         placeholder="Enter Email adress" name="email"/>
                                 </div>
 
-                                    <div class="input-container">
-                                        <i class="fa fa-key icon"></i>
-                                            <input class="input-field" style ={{color :'white',fontFamily:'cursive',fontWeight:"bolder",fontSize :'25px' }} type="password" 
+                                    <div className="input-container">
+                                        <i className="fa fa-key icon"></i>
+                                            <input className="input-field" style ={{color :'white',fontFamily:'cursive',fontWeight:"bolder",fontSize :'25px' }} type="password" 
                                              value={password}
                                              onChange = {(e) => setPassword(e.target.value)}
                                             placeholder="Enter Password" name="password"/>

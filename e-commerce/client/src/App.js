@@ -13,8 +13,9 @@ import Cart from './components/Cart';
 import AddProducts from './components/AddProducts';
 import Success from './components/Success';
 import Account from './components/Account';
-import Order from './components/Order';
 import Bank from './components/Bank';
+import Checkout from './components/Checkout';
+import OrderSuccess from './components/OrderSuccess';
 
 const App = () => {
   return (
@@ -50,11 +51,14 @@ const App = () => {
     <Route exact path = "/account">
       <Account/>
     </Route>
-    <Route exact path = "/order">
-      <Order/>
+    <Route exact path = "/checkout">
+      <Checkout/>
     </Route>
     <Route exact path = "/bank">
       <Bank/>
+    </Route>
+    <Route exact path = "/ordersuccess">
+      <OrderSuccess/>
     </Route>
     
 

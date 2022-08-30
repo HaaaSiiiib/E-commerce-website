@@ -114,7 +114,7 @@ const Cart = () => {
     <div>
 
       <button color={{}} style={{ color: "white", borderRadius: '30px', fontSize: '20px', border: 'black', fontWeight: 'bold', position: 'relative', left: '600px', width: '300px', height: '50px' }}
-        type="submit" name='shop' id='shop' className="btn btn-primary mt-5"><Link to="/addProducts" style={{ color: 'white' }}>Go to Checkout </Link></button>
+        type="submit" name='shop' id='shop' className="btn btn-primary mt-5"><Link to="/checkout" style={{ color: 'white' }}>Go to Checkout </Link></button>
     </div>
 
   </>
