@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useHistory } from 'react-router-dom';
+import { Card } from 'react-bootstrap';
 //import Transaction from './Transaction';
 //import transactionData from './Transaction'
 
@@ -23,7 +24,7 @@ const About = () => {
                 },
             });
 
-            if(res.status != 200) {
+            if (res.status != 200) {
                 history.push('/login');
             }
 
@@ -85,12 +86,12 @@ const About = () => {
                             </div>
 
                             <div style={{ position: 'relative', left: '-150px', top: '20px' }} className='col-md-2'>
-                                <input type="submit" className="profil-edit-btn" name='btnAddMore' value="Log out" 
-                                onClick={()=>{localStorage.removeItem('session'); location.reload()}}
+                                <input type="submit" className="profil-edit-btn" name='btnAddMore' value="Log out"
+                                    onClick={() => { localStorage.removeItem('session'); location.reload() }}
                                 />
                             </div>
 
-                      
+
 
 
 
@@ -137,10 +138,28 @@ const About = () => {
 
                                     <div className='tab-pane fade' id="orderHistory" role="tabpanel" aria-labelledby="orderHistory-tab">
                                         <div className="row">
-                                            
+
                                             <div style={{ position: 'relative', color: 'black', top: '20px' }} className='col-md-6'>
 
-                                                <p>{data.orders[0] && data.orders[0].transactionId}</p>
+                                                <p>
+                                                    <Card style={{ width: '38rem', left: '20px', top: "18px" }}>
+
+                                                        {/* <Card.Img variant="top" src={data[0].imgUrl }/> */}
+                                                        <Card.Body>
+                                                            <Card.Title> Transaction Id : {localStorage.getItem('transactionId')}</Card.Title>
+                                                            <Card.Title> Cost : {localStorage.getItem('transactionAmount')} TK</Card.Title>
+                                                            <Card.Text>
+                                                                Location : {localStorage.getItem('location')}
+                                                            </Card.Text>
+                                                            <Card.Text>
+                                                                Ordered at : {localStorage.getItem('ordertime')}
+                                                            </Card.Text>
+
+                                                        </Card.Body>
+
+
+                                                    </Card>
+                                                </p>
                                             </div>
 
                                         </div>

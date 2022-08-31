@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react'
-import { Table } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import Card from 'react-bootstrap/Card';
-import { useHistory } from 'react-router-dom';
 
 const Checkout = () => {
+
 
   const [shippingAddress, setShippingAdrdess] = useState();
   const [billingData, setbillingData] = useState();
@@ -25,6 +25,7 @@ const Checkout = () => {
 
     const data = await res.json();
     localStorage.setItem("items", JSON.stringify(data));
+    localStorage.setItem("price", data.price)
     console.log("bug", data);
     setData(data.items);
   }
@@ -58,43 +59,26 @@ const Checkout = () => {
 
     const shippingData = await res2.json();
     console.log(shippingData)
-    localStorage.setItem("shippingaddress", shippingData);
-    console.log(localStorage.getItem('shippingaddress'));
+    const isProduct = localStorage.getItem("items")
+    if ( !isProduct) {
+      window.alert("Add a product to your cart first");
+    }
+    else {
+      localStorage.setItem("shippingaddress", shippingData);
+      localStorage.setItem("transactionId", shippingData.transactionId);
+      localStorage.setItem("transactionAmount", shippingData.transactionAmount);
+      localStorage.setItem("location", shippingData.shippingAddress);
+      localStorage.setItem("ordertime", shippingData.createdAt);
+
+
+      console.log(localStorage.getItem('shippingaddress'));
+    }
   }
 
   useEffect(() => {
     callShippingAddress();
 
   }, []);
-
-
-
-
-  // const callCheckoutBilling = async (e) => {
-
-  //   const res = await fetch('https://ecom.cse446.ml/api/v1/carts/', {
-  //     method: "GET",
-  //     headers: {
-  //       "Content-Type": "application/json",
-  //       "Accept": "applocation/json",
-  //       "Authorization": "Bearer " + localStorage.getItem("session")
-  //     },
-
-  //   });
-
-  //   const billingData = await res.json();
-  //   localStorage.setItem("items", JSON.stringify(billingData));
-  //   console.log("bug", data);
-  //   setData(billingData.items);
-  // }
-
-  // useEffect(() => {
-  //   setIsLoading(true);
-  //   callCheckoutBilling();
-  //   setIsLoading(false);
-
-  // }, []);
-
 
 
 
@@ -122,7 +106,7 @@ const Checkout = () => {
           <h1 className='heading pb-5 ps-5' style={{ color: 'Black' }}>
             Your Order
           </h1>
-          <div className='orders mb-5 pb-5'>
+          <div className='orders pb-5'>
 
             {data.map((item, key) => <Card style={{ width: '68rem', left: '120px' }}>
 
@@ -141,39 +125,40 @@ const Checkout = () => {
 
 
             </Card>
+              
 
 
             )}
+          </div>
+
+          <div className='price pb-5'>
+            <h3> Total Price : {localStorage.getItem('price')} TK </h3>
           </div>
 
           <h1 className='heading pb-4' style={{ color: 'Black' }}>
             Shipping Address :
           </h1>
           <div className='shipping '>
-              <form mothod="POST" className="address-form" id="address-form">
+            <form mothod="POST" className="address-form" id="address-form">
 
-                <div className="input-container">
-                  <i style={{ position: 'relative',color :'black', top:'18px', left: '130px'}} className="fa fa-map-marker fa-4x"></i>
-                  <input className="input-field" style={{ height:'120px', width:'700px', top:'-70px', left:'210px', color: 'white', fontFamily: 'cursive', fontWeight: "bolder", fontSize: '25px' }} type="text"
-                    value={shippingAddress}
-                    onChange={(e) => setShippingAdrdess(e.target.value)} placeholder="Enter Your Address" name="shippingAddress" />
-                </div>
+              <div className="input-container">
+                <i style={{ position: 'relative', color: 'black', top: '10px', left: '180px' }} className="fa fa-map-marker fa-3x"></i>
+                <input className="input-field" style={{ height: '60px', width: '700px', left: '210px', color: 'white', fontFamily: 'cursive', fontWeight: "bolder", fontSize: '25px' }} type="text"
+                  value={shippingAddress}
+                  onChange={(e) => setShippingAdrdess(e.target.value)} placeholder="Enter Your Address" name="shippingAddress" />
+              </div>
 
 
-                <button style={{ borderRadius: '30px', fontSize: '20px', border: 'black', fontWeight: 'bold', position: 'relative', top:'-50px' ,left: '210px', width: '200px', height: '50px' }}
-                                        type="submit" name='signin' id='signin' class="btn btn-primary mb-5" onClick={callShippingAddress} >Confirm</button>
-              </form>
-         
+              <button style={{ borderRadius: '30px', fontSize: '20px', border: 'black', fontWeight: 'bold', position: 'relative', top: '10px', left: '240px', width: '100px', height: '40px' }}
+                type="submit" name='signin' id='signin' class="btn btn-primary mb-5" onClick={callShippingAddress}>Done</button>
+            </form>
+
 
 
           </div>
 
-
-
-
-          <h1 className='heading pb-5' style={{ color: 'Black' }}>
-            Billing Details :
-          </h1>
+          <button style={{ borderRadius: '30px', fontSize: '20px', border: 'black', fontWeight: 'bold', position: 'relative', top: '120px', left: '740px', width: '300px', height: '50px' }}
+                type="submit" name='signin' id='signin' class="btn btn-primary mb-5"><Link to="/ordersuccess" style={{ color: 'white' }}>Confirm Order </Link></button>
 
 
         </div>
