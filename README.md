@@ -1,6 +1,32 @@
-# CSE-446-Frontend
+# E-Commerce Website
 
-Web project frontend for CSE-446 course
+This repository consists the web project frontend for CSE-446 course
+
+## Project :
+Develop an e-commerce website with inventory, sales functionality with card payment, administrative and client privileges, etc.
+A supplier portal  for  inventory and Orders tracking and a bank for all entities to track their balances. 
+
+# Languages 
+
+-  **M**ongoDb - **E**xpress.js - **R**eact.js - **N**ode.js -
+
+# Workflow : 
+
+- 3 different module. created An **E-Commerce(Client+Admin), A Supplier and A Bank** Site with MERN. 
+- Built 3 Interconnecting **API endpoints** for the 3 stream.
+- **MongoDB** for Database,used 4 Collections for whole project.
+
+- Order Tracking 
+- Admin must approve every order manually and forware to 'Supplier'
+- Admin can **Add new Product** with  price.
+- Every SALES transaction : <br/>
+
+   **==>>** User Checkout using **Online payment**
+   **==>>** **Admin Approves** and Gets SUBTOTAL in his account.
+   **==>>** Forwards Order to **Suppliers and keeps** 20% Incentive 
+   **==>>** Supplier accepts and Order status is 'delivered' 
+ 
+- Every **User/Admin/Suppliers** can check their Bank Balance in **Bank Server**
 
 # How to install and run
 
