@@ -32,7 +32,7 @@ A supplier portal  for  inventory and Orders tracking and a bank for all entitie
 
 #### 1. First clone the repository to your computer or download the project as zip file.
 
-`git clone https://github.com/HaaaSiiiib/CSE-446-Frontend.git`
+`git clone https://github.com/HaaaSiiiib/E-commerce-website.git`
 
 #### 2.  There are two frontend sites for this project. Both needs to be run separately. Assuming you are in the parent folder, do the following.
 
