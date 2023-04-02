@@ -1,0 +1,31 @@
+# session
+
+SESSION_SECRET='your secret key'
+
+
+# database
+
+DB='postgresql'
+DB_HOST='localhost'
+DB_PORT='5432'
+DB_NAME='bank'
+DB_USER='yourname'
+DB_PASSWORD='yourpassword'
+
+
+# server
+
+HOST='localhost'
+PORT='4001'
+
+
+# application
+
+DEV_MODE='development'
+
+
+# bank account numbers
+
+CUSTOMER_ACCOUNT='some uuid'
+ECOMMERCE_ACCOUNT='some uuid'
+SUPPLIER_ACCOUNT='some uuid'
