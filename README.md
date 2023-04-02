@@ -1,6 +1,6 @@
 # E-Commerce Website
 
-This repository consists the web project frontend for CSE-446 course
+This repository consists the web project for CSE-446 course
 
 ## Project :
 Develop an e-commerce website with inventory, sales functionality with card payment, administrative and client privileges, etc.
@@ -58,8 +58,3 @@ E-commerce: http://127.0.0.1:4005
 Bank: https://bank-frontend.cse446.ml
 
 E-commerce: https://ecom-frontend.cse446.ml
-
-# Bankend
-
-Following repository contains the backend for this project
-https://github.com/TissuePowder/CSE-446
