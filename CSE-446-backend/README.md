@@ -44,8 +44,3 @@ Bank: https://bank.cse446.ml/swagger
 Supplier: https://suppl.cse446.ml/swagger
 
 Ecommerce: https://ecom.cse446.ml/swagger
-
-# Frontend
-
-Following repository contains the frontend for this project
-https://github.com/HaaaSiiiib/CSE-446-Frontend
