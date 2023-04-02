@@ -5,7 +5,7 @@ Web project for CSE-446 course
 
 #### 1. First clone the repository to your computer or download the project as zip file.
 
-`git clone https://github.com/TissuePowder/CSE-446.git`
+`git clone https://github.com/HaaaSiiiib/E-commerce-website.git`
 
 #### 2. Three organizations are three different servers and each one has to be installed and run separately. Assuming you are in the parent (CSE-446) directory or whatever name you cloned the project, do the following.
 
