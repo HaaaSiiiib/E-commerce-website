@@ -2,7 +2,7 @@
 
 This repository consists the web project for CSE-446 course
 
-# Project :
+# Project
 Develop an e-commerce website with inventory, sales functionality with card payment, administrative and client privileges, etc.
 A supplier portal  for  inventory and Orders tracking and a bank for all entities to track their balances. 
 
@@ -10,7 +10,7 @@ A supplier portal  for  inventory and Orders tracking and a bank for all entitie
 
 -  **M**ongoDb - **E**xpress.js - **R**eact.js - **N**ode.js -
 
-# Workflow : 
+# Workflow
 
 - 3 different module. created An **E-Commerce(Client+Admin), A Supplier and A Bank** Site with MERN. 
 - Built 3 Interconnecting **API endpoints** for the 3 stream.
