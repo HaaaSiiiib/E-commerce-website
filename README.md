@@ -8,7 +8,7 @@ A supplier portal  for  inventory and Orders tracking and a bank for all entitie
 
 # Languages 
 
--  **M**ongoDb - **E**xpress.js - **R**eact.js - **N**ode.js -
+-  PostgreSQL - Express.js - React.js - Node.js -
 
 # Workflow
 
