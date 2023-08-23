@@ -1,10 +1,10 @@
 # E-Commerce Website
 
-This repository consists the web project for CSE-446 course
+This repository consists of the web project for the CSE-446 course
 
 # Project
 Develop an e-commerce website with inventory, sales functionality with card payment, administrative and client privileges, etc.
-A supplier portal  for  inventory and Orders tracking and a bank for all entities to track their balances. 
+A supplier portal  for  inventory and Order tracking and a bank for all entities to track their balances. 
 
 # Languages 
 
@@ -12,14 +12,13 @@ A supplier portal  for  inventory and Orders tracking and a bank for all entitie
 
 # Workflow
 
-- 3 different module. created An **E-Commerce(Client+Admin), A Supplier and A Bank** Site with MERN. 
+- 3 different modules. created An **E-Commerce(Client+Admin), A Supplier and A Bank** Site with MERN. 
 - Built 3 Interconnecting **API endpoints** for the 3 stream.
-- **MongoDB** for Database,used 4 Collections for whole project.
 
 - Order Tracking 
-- Admin must approve every order manually and forware to 'Supplier'
+- Admin must approve every order manually and forward it to 'Supplier'
 - Admin can **Add new Product** with  price.
-- Every SALES transaction : <br/>
+- Every SALES transaction: <br/>
 
    **==>>** User Checkout using **Online payment**
    **==>>** **Admin Approves** and Gets SUBTOTAL in his account.
@@ -30,7 +29,7 @@ A supplier portal  for  inventory and Orders tracking and a bank for all entitie
 
 # How to install and run
 
-#### 1. First clone the repository to your computer or download the project as zip file.
+#### 1. First, clone the repository to your computer or download the project as a zip file.
 
 `git clone https://github.com/HaaaSiiiib/E-commerce-website.git`
 
@@ -71,10 +70,10 @@ Bank: https://bank.cse446.ml/swagger
 
 Supplier: https://suppl.cse446.ml/swagger
 
-Ecommerce: https://ecom.cse446.ml/swagger
+E-commerce: https://ecom.cse446.ml/swagger
 
 
-#### 6.  There are two frontend sites for this project. Both needs to be run separately. Assuming you are in the parent folder, do the following.
+#### 6.  There are two front-end sites for this project. Both need to be run separately. Assuming you are in the parent folder, do the following.
 
 ```
 cd bank
